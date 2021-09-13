@@ -21,7 +21,8 @@
   "keywords": [
     "did",
     "did-driver",
-    "resolver"
+    "resolver",
+    "sidetree"
   ],
   "author": "evan GmbH",
   "license": "Apache-2.0",
@@ -29,10 +30,11 @@
     "url": "https://github.com/evannetwork/did-driver/issues"
   },
   "dependencies": {
-    "@sidetree/element": "^0.2.6-unstable.2",
+    "@evan.network/did-resolver": "^1.0.0",
     "express": "^4.16.4"
   },
   "devDependencies": {
+    "@types/node": "^16.9.1",
     "env-cmd": "^10.1.0",
     "nodemon": "^2.0.12",
     "ts-node": "^8.5.4",
