@@ -29,7 +29,6 @@
     "url": "https://github.com/evannetwork/did-driver/issues"
   },
   "dependencies": {
-    "@evan.network/did-resolver": "^1.0.0",
     "@sidetree/element": "^0.2.6-unstable.2",
     "express": "^4.16.4"
   },
