@@ -7,10 +7,12 @@
     "prepublish": "tsc",
     "build": "tsc",
     "start": "dist/index.js",
+    "dev": "nodemon src/index.ts | pino-pretty",
+    "dev:debug": "nodemon --exec \"env-cmd -e development node -r ts-node/register --inspect-brk\" src/index.ts | pino-pretty",
     "prepare": "tsc",
     "clean": "rm -rf js node_modules",
     "server": "yarn prepare && node dist/index.js",
-    "test": "echo 'No tests yet'"    
+    "test": "echo 'No tests yet'"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,8 @@
   "keywords": [
     "did",
     "did-driver",
-    "resolver"
+    "resolver",
+    "sidetree"
   ],
   "author": "evan GmbH",
   "license": "Apache-2.0",
@@ -31,7 +34,10 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
-    "ts-node": "^8.5.4",    
+    "@types/node": "^16.9.1",
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.12",
+    "ts-node": "^8.5.4",
     "typescript": "^3.5.3"
   },
   "homepage": "https://github.com/evannetwork/did-driver#readme"
